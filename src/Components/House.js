@@ -16,8 +16,8 @@ export const House= (props)=> {
     const addNewRoom = (room) =>  updateHouse({...house, rooms:[...house.rooms, room]});
 
     
-
-    const rooms = () => (
+    
+    const rooms = () => (!house.rooms) ? <p>No rooms yet</p>:(
         <ul>
             {house.rooms.map((room, index) => (
                 <li key={index}>

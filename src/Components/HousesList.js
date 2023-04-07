@@ -5,7 +5,10 @@ import {useEffect, useState} from 'react';
 
 
 
-const houses={house1Name:'Meadow Manor', house2Name:'Red House'};
+
+const houses={
+    house1Name:'Meadow Manor', 
+    house2Name:'Red House'};
 const houseProperties= Object.values(houses);
 console.log(houseProperties);
 
@@ -14,6 +17,7 @@ export class HousesList extends React.Component{
         super(props)
         this.state = {
           houses:[]
+          
         };
     }
 
@@ -40,7 +44,7 @@ export class HousesList extends React.Component{
 
     render(){
         return(
-            <div className="house-list" >
+            <div className="house-list" id='background' >
                 {houseProperties.map((house)=>(
                     
                     <House
