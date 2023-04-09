@@ -1,4 +1,4 @@
-const HOUSES_ENDPOINT = 'https://642e2b578ca0fe3352ca1028.mockapi.io/Houses-API';
+const HOUSES_ENDPOINT = 'https://642e2b578ca0fe3352ca1028.mockapi.io/HousesAPI';
 
 class HousesApi  {
     get = async () =>{

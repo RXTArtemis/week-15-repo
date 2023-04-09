@@ -2,7 +2,7 @@ import React from "react";
 import {House} from './House';
 import { housesApi } from "../rest/HousesApi.js";
 import {useEffect, useState} from 'react';
-
+import './background.css';
 
 
 
@@ -44,16 +44,17 @@ export class HousesList extends React.Component{
 
     render(){
         return(
-            <div className="house-list" id='background' >
-                {houseProperties.map((house)=>(
+            <div className="house-list"  >
+                {houseProperties.map((house, index)=>(
                     
-                    <House
+                    <House className='items'
                     house={house}
                     houseName={this.houseName}
-                    key={house.id}
+                    key={index}
                     updateHouse={this.updateHouse}
                     />
                 ))}
+             
             </div>
         )
     }

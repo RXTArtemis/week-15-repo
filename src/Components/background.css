@@ -1,4 +1,21 @@
-#background{
-    background: url('https://www.wallmur.com/media/catalog/pdata/cache/1/crop_image/1100x/040ec0/e/y/watercolor-cute-houses-with-flying-animals-wallpaper-mural-for-kids-wm-ey000032-41484973.jpg');
-  }
+body{
+    background-image: url('https://www.wallmur.com/media/catalog/pdata/cache/1/crop_image/1100x/040ec0/e/y/watercolor-cute-houses-with-flying-animals-wallpaper-mural-for-kids-wm-ey000032-41484973.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 100%;
+    position: relative;
+	display: flex;
+    align-content: center;
+   
+}
+
+div{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+    
+}
   
+.house-list{
+    width: 1000px;
+	display:block;
+}

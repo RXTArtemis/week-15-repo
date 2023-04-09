@@ -22,7 +22,7 @@ export const NewRoomForm = (props) => {
     return (
         <div>
             <h4>Add a new room</h4>
-            <form onSubmit = {onSubmit}>
+            <form onSubmit = {(e)=> onSubmit(e)}>
                 <input
                 type='text'
                 placeholder='name'
@@ -34,7 +34,7 @@ export const NewRoomForm = (props) => {
                 type='text'
                 placeholder='area'
                 value={area}
-                onChange={handleAreaInput}
+                onChange={(e)=> handleAreaInput(e)}
                 
                 />
                 <button type='submit'>Add Room</button>

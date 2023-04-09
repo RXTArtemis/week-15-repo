@@ -11,11 +11,11 @@ export const House= (props)=> {
             rooms: house.rooms.filter((x) => x._id !== roomId)
         };
         updateHouse(updatedHouse);
-    }
+    } 
     
-    const addNewRoom = (room) =>  updateHouse({...house, rooms:[...house.rooms, room]});
+    const addNewRoom = (room) =>  updateHouse({...house, rooms: [...house.rooms, room]});
 
-    
+    console.log(house);
     
     const rooms = () => (!house.rooms) ? <p>No rooms yet</p>:(
         <ul>
@@ -28,10 +28,11 @@ export const House= (props)=> {
         </ul>
     );
 
-    return(
+    return (
         <div>
-            <h1 key={house.id}>{house.name}</h1>
-            {rooms({rooms, houseId: house._id, deleteRoom})
+            <h1 key={house._id}>{house.name}</h1>
+            {
+            rooms({rooms, houseId: house._id, deleteRoom})
             }
             <NewRoomForm addNewRoom={addNewRoom} />
         </div>
