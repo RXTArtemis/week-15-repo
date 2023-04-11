@@ -1,7 +1,7 @@
 import React from 'react';
 import {NewRoomForm} from './NewRoomForm';
 
-
+// const room=[];
 export const House= (props)=> {
     const {house, updateHouse} = props;
 
@@ -12,8 +12,30 @@ export const House= (props)=> {
         };
         updateHouse(updatedHouse);
     } 
+    //fix error on line 16
+    // const addNewRoom = (room) =>  updateHouse({...house, rooms: [...house.rooms,room]});
+    const addNewRoom = (room) => {
+        //generate random index
+        let randomIndex = Math.floor(Math.random() * house.rooms.length);
+        //check if existing room id matches the randomIndex and if it does increment until it does not match
+        while (house.rooms.some((x) => x.house_id === house.rooms.randomIndex)) {
+          rooms.randomIndex++;
+          console.log("randomIndex:", randomIndex);
+        }
     
-    const addNewRoom = (room) =>  updateHouse({...house, rooms: [...house.rooms, room]});
+        const updatedHouse = {
+          ...house,
+          rooms: [
+            ...house.rooms,
+            {
+              _id: randomIndex,
+              name: room.name,
+              area: room.area,
+            },
+          ],
+        };
+        return updateHouse(updatedHouse);
+    }
 
     console.log(house);
     

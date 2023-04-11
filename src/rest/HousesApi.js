@@ -5,6 +5,7 @@ class HousesApi  {
         try{
         const resp = await fetch(HOUSES_ENDPOINT);
         const data = await resp.json();
+        console.log(data);
         return data;
         }catch (e) {
             console.log('Oops, looks like fetchHouses had an issue.', e);

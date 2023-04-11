@@ -34,6 +34,7 @@ export class HousesList extends React.Component{
     fetchHouses = async()=>{
         const houses= await housesApi.get();
         this.setState({houses});
+        console.log('houses',houses);
 
     };
 
@@ -44,8 +45,9 @@ export class HousesList extends React.Component{
 
     render(){
         return(
+            console.log(houseProperties),
             <div className="house-list"  >
-                {houseProperties.map((house, index)=>(
+                {this.state.houses.map((house, index)=>(
                     
                     <House className='items'
                     house={house}

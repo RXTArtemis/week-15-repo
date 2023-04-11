@@ -3,6 +3,7 @@ import React, {useState} from "react";
 export const NewRoomForm = (props) => {
     const [name, setName] = useState('');
     const [area, setArea] = useState('');
+//figure out if undefined goes with useState like in the video
 
     const handleAreaInput = (e) => {
         const int = parseInt(e.target.value, 10);
@@ -26,16 +27,14 @@ export const NewRoomForm = (props) => {
                 <input
                 type='text'
                 placeholder='name'
-                value={name}
                 onChange={(e)=> setName(e.target.value)}
-               
+                value={name}
                 />
                 <input
                 type='text'
                 placeholder='area'
-                value={area}
                 onChange={(e)=> handleAreaInput(e)}
-                
+                value={area}
                 />
                 <button type='submit'>Add Room</button>
             </form>
