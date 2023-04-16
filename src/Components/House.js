@@ -18,7 +18,7 @@ export const House= (props)=> {
         //generate random index
         let randomIndex = Math.floor(Math.random() * house.rooms.length);
         //check if existing room id matches the randomIndex and if it does increment until it does not match
-        while (house.rooms.some((x) => x.house_id === house.rooms.randomIndex)) {
+        while (house.rooms.some((x) => x._id === randomIndex)) {
          if(randomIndex++ <=100)
           console.log("randomIndex:", randomIndex);
         }
